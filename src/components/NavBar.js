@@ -1,26 +1,17 @@
-import React, { useState } from "react";
-import logo from "../assets/logo.jpg";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { VscChromeClose } from "react-icons/vsc";
+import React from "react";
+import CartWidget from "./CartWidget"
 
 
 export default function NavBar() {
-  const [navbarState, setNavbarState] = useState(false);
-  return (
+    return (
     <>
     <nav>
         <div className="brand">
             <div className="container">
-                <img src={logo} alt="" />
+                <CartWidget />
                 New Universe
             </div>
-            <div className="toggle">
-                {navbarState ? (
-                <VscChromeClose onClick={() => setNavbarState(false)} />
-                ) : (
-                <GiHamburgerMenu onClick={() => setNavbarState(true)} />
-            )}
-            </div>
+            
         </div>
 
         <ul>
