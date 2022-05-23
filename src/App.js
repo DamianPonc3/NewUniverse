@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 import "./scss/index.scss"
 import ShoppingCart from "./components/ShoppingCart";
+import ItemCount from "./components/ItemCount";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <ItemListContainer greeting="¡Elegí el pack que mas te convenga y congelá el precio!" />
       <hr />
       <ShoppingCart />
+      <hr/>
+      <ItemCount />
     </div>
   );
 }
