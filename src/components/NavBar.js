@@ -1,35 +1,23 @@
 import React from "react";
-import CartWidget from "./CartWidget"
+import Navbar from "react-bootstrap/NavBar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
 
-
-export default function NavBar() {
+function NavBar() {
     return (
-    <>
-    <nav>
-        <div className="brand">
-            <div className="container">
-                <CartWidget />
-                New Universe
-            </div>
-            
-        </div>
-
-        <ul>
-            <li>
-                <a href="#home">Home</a>
-            </li>
-            <li>
-                <a href="#services">About</a>
-            </li>
-            <li>
-                <a href="#recommend">Places</a>
-            </li>
-            <li>
-                <a href="#testimonials">Testimonials</a>
-            </li>
-        </ul>
-        <button>Connect</button>
-    </nav>
-    </>
+        <Navbar bg="light" expand="lg">
+  <Container>
+    <Navbar.Brand href="#home">New Universe</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Collapse id="basic-navbar-nav">
+      <Nav className="me-auto">
+        <Nav.Link href="#home">Home</Nav.Link>
+        <Nav.Link href="#link">Contacto</Nav.Link>
+      </Nav>
+    </Navbar.Collapse>
+  </Container>
+</Navbar>
     );
 }
+
+export default NavBar;
